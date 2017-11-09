@@ -11,6 +11,7 @@ Este protocolo se establece sobre la capa de conexión TCP/IP, y funciona de la 
 - Permite transferencia de objetos multimedia
 - Hay 8 verbos que permiten al cliente dialogar con el servidor
 - Cada operación implica una conexión con el servidor que es liberada cuando se termina esta
+---
 - No mantiene el estado
 - Cada objeto está identificado a través de un localizador uniforme de recurso único
 
@@ -32,6 +33,7 @@ Los encabezados patentados personalizados se pueden agregar usando el prefijo 'X
 ### Cabeceras HTTP
 - Encabezado general: Encabezados que se aplican tanto a las solicitudes como a las respuestas, pero sin relación con los datos que finalmente se transmiten en el cuerpo.
 - Encabezado de solicitud: encabezados que contienen más información sobre el recurso que se va a buscar o sobre el propio cliente.
+---
 - Encabezado de respuesta: Encabezados con información adicional sobre la respuesta, como su ubicación o sobre el servidor en sí (nombre y versión, etc.).
 - Encabezado de entidad: Encabezados que contienen más información sobre el cuerpo de la entidad, como su longitud de contenido o su tipo MIME.
 
@@ -42,6 +44,7 @@ Los encabezados patentados personalizados se pueden agregar usando el prefijo 'X
 Una vez la conexión se establece, el cliente es capaz de mandar una petición de datos. La petición de datos de un cliente HTTP, consiste en directivas de texto separadas por CRLF
 Se divide en:
 - Primera parte, consiste en una línea, que contiene un método, seguido de sus parámetros
+---
 - Segunda parte, está fomada por un bloque de lÍneas consecutivas que son las cabeceras de la petición y dan información al servidor.
 - La tercera parte es un bloque de datos opcional, que puede contener más datos para ser usados por el método POST
 
@@ -55,6 +58,7 @@ Se divide en:
 ---
 ### Respuestas HTTP
 Cuando el servidor procesa la petición enviada por el usuario responde de una forma muy parecida a la petición del servidor, la respuesta del servidor está formada por directivas de texto separadas por el carácter CRLF y se divide en
+---
 - La primera parte, es la línea de estado, es una confirmación de la versión de HTTP usado y seguido por el estado de la petición
 - La segunda parte representa las cabeceras HTTP concretas, dando al cliente la información sobre los datos enviados
 - La tercera y última parte es en donde se pueden contener opcionalmente los datos
@@ -63,6 +67,7 @@ Cuando el servidor procesa la petición enviada por el usuario responde de una f
 ### Cookies
 Cuando se recibe una solicitud HTTP un servidor puede enviar un Set-Cookie con las respuestas. Las cookies normalmente son almacenadas por el navegador y luego se envía con las solicitudes hechas al mismo servidor dentro de una cookie HTTP
 Los distintos tipos de cookies que hay son
+---
 - Cookies de sesión
 - Cookies permanentes
 
@@ -71,8 +76,10 @@ Los distintos tipos de cookies que hay son
 ### Cookies
 ### Gestión de sesiones
 Inicios de sesión, carritos de compras, puntajes de juegos o cualquier otra cosa que el servidor deba recordar
+---
 ### Personalización
 Preferencias de usuario, temas y otras configuraciones
+---
 ### Rastreo
 Grabar y analizar el comportamiento del usuario
 
@@ -87,6 +94,7 @@ Mejoras v 1.0
 - La información del control de versiones se envía ahora dentro da solicitud
 - También se envía una línea de código de estado al comienzo de respuesta.
 - Se ha introducido la noción de encabezados HTTP
+---
 - Con la ayuda de los nuevos encabezados HTTP se ha agregado la capacidad de transmitir otros documentos aparte de los archivos HTML simples
 
 ---
@@ -94,6 +102,7 @@ Mejoras v 1.0
 Nuevas mejoras v 1.1
 Se puede reutilizar una conexión, ahorrarle tiempo a reabrirla numerosas veces para mostrar los recursos incrustados en el único documento original
 Se ha agregado la canalización
+---
 Las respuestas fragmentadas ahora son compatibles
 Se han introducido mecanismos adicionales de control de cache
 Se ha introducido la negociación de contenido
@@ -104,5 +113,6 @@ Se ha introducido la negociación de contenido
 El protocolo HTTP 2.0 tiene varias diferencias principales de la versión
 - Es un protocolo binario en lugar de texto.
 - Es un protocolo multiplexado
+---
 - Comprime encabezados
 - Permite a un servidor completar los datos en un caché del cliente.
