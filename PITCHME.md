@@ -57,6 +57,7 @@ El método reemplaza todas las representaciones actuales del recurso objetivo co
 El método elimina el recurso especificado.
 ### CONNECT
 El método establece un túnel para el servidor identificado por el recurso de destino.
+
 ---
 ### OPTIONS
 El método se usa para describir las opciones de comunicación para el recurso objetivo.
