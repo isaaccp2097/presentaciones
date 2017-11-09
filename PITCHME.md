@@ -41,27 +41,27 @@ Los encabezados patentados personalizados se pueden agregar usando el prefijo 'X
 
 ---
 ### Peticiones HTTP
-###GET
+### GET
 El GETmétodo solicita una representación del recurso especificado. Las solicitudes de uso GETsolo deberían recuperar datos.
 ###HEAD
 El HEADmétodo solicita una respuesta idéntica a la de una GETsolicitud, pero sin el cuerpo de respuesta.
 ---
-###POST
+### POST
 El POSTmétodo se usa para enviar una entidad al recurso especificado, lo que a menudo causa un cambio en el estado o los efectos secundarios en el servidor.
-###PUT
+### PUT
 El PUTmétodo reemplaza todas las representaciones actuales del recurso objetivo con la carga útil de la solicitud.
 ---
-###DELETE
+### DELETE
 El DELETEmétodo elimina el recurso especificado.
-###CONNECT
+### CONNECT
 El CONNECTmétodo establece un túnel para el servidor identificado por el recurso de destino.
 ---
-###OPTIONS
+### OPTIONS
 El OPTIONSmétodo se usa para describir las opciones de comunicación para el recurso objetivo.
-###TRACE
+### TRACE
 El TRACEmétodo realiza una prueba de bucle de mensaje a lo largo de la ruta al recurso de destino.
 
-###PATCH
+### PATCH
 El PATCHmétodo se usa para aplicar modificaciones parciales a un recurso.
 ---
 ### Peticiones HTTP
