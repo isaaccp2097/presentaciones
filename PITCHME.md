@@ -23,9 +23,19 @@ En los protocolos que están basados en el modelo cliente-servidor, una sesión 
 
 ---
 ### Cabeceras HTTP
-Las cabeceras de este protocolo han conseguido que este sea más fácil de ampliar y de experimentar con él. Nuevas funcionalidades pueden desarrollarse, sin más que un cliente y su servidor, comprendan la misma forma de hablar sobre las características de HTTP.
-Mediante dichas cabeceras se puede flexibilizar o relajar la división entre cliente y servidor
-Un ejemplo común sería ### WWW-Autenticate
+Permite que el cliente y el servidor pasen información adicional con la solicitud o la respuesta.
+Un encabezado de solicitud consiste en un nombre sensible a mayúsculas y minúsculas seguido de dos puntos y luego por su valor
+
+Los encabezados patentados personalizados se pueden agregar usando el prefijo 'X’, otros se enumeran en un registro de IANA.
+
+---
+### Cabeceras HTTP
+- Encabezado general: Encabezados que se aplican tanto a las solicitudes como a las respuestas, pero sin relación con los datos que finalmente se transmiten en el cuerpo.
+- Encabezado de solicitud: encabezados que contienen más información sobre el recurso que se va a buscar o sobre el propio cliente.
+- Encabezado de respuesta: Encabezados con información adicional sobre la respuesta, como su ubicación o sobre el servidor en sí (nombre y versión, etc.).
+- Encabezado de entidad: Encabezados que contienen más información sobre el cuerpo de la entidad, como su longitud de contenido o su tipo MIME.
+
+
 
 ---
 ### Peticiones HTTP
@@ -49,6 +59,50 @@ Cuando el servidor procesa la petición enviada por el usuario responde de una f
 - La segunda parte representa las cabeceras HTTP concretas, dando al cliente la información sobre los datos enviados
 - La tercera y última parte es en donde se pueden contener opcionalmente los datos
 
+---
+### Cookies
+Cuando se recibe una solicitud HTTP un servidor puede enviar un Set-Cookie con las respuestas. Las cookies normalmente son almacenadas por el navegador y luego se envía con las solicitudes hechas al mismo servidor dentro de una cookie HTTP
+Los distintos tipos de cookies que hay son
+- Cookies de sesión
+- Cookies permanentes
 
 
+---
+### Cookies
+### Gestión de sesiones
+Inicios de sesión, carritos de compras, puntajes de juegos o cualquier otra cosa que el servidor deba recordar
+### Personalización
+Preferencias de usuario, temas y otras configuraciones
+### Rastreo
+Grabar y analizar el comportamiento del usuario
 
+
+---
+### Evolución de HTTP
+La versión 0.9 fue la primera y fue extremadamente simple. Las solicitudes consisten en una sola línea y comienzan con el único método posible GET seguido de la ruta al recurso
+
+---
+### Evolución de HTTP
+Mejoras v 1.0
+- La información del control de versiones se envía ahora dentro da solicitud
+- También se envía una línea de código de estado al comienzo de respuesta.
+- Se ha introducido la noción de encabezados HTTP
+- Con la ayuda de los nuevos encabezados HTTP se ha agregado la capacidad de transmitir otros documentos aparte de los archivos HTML simples
+
+---
+### Evolución de HTTP
+Nuevas mejoras v 1.1
+Se puede reutilizar una conexión, ahorrarle tiempo a reabrirla numerosas veces para mostrar los recursos incrustados en el único documento original
+Se ha agregado la canalización
+Las respuestas fragmentadas ahora son compatibles
+Se han introducido mecanismos adicionales de control de cache
+Se ha introducido la negociación de contenido
+
+---
+
+### Características de HTTP 2.0
+El protocolo HTTP 2.0 tiene varias diferencias principales de la versión
+- Es un protocolo binario en lugar de texto.
+- Es un protocolo multiplexado
+- Comprime encabezados
+- Permite a un servidor completar los datos en un caché del cliente.
