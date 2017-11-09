@@ -42,27 +42,27 @@ Los encabezados patentados personalizados se pueden agregar usando el prefijo 'X
 ---
 ### Peticiones HTTP
 ### GET
-El GETmétodo solicita una representación del recurso especificado. Las solicitudes de uso GETsolo deberían recuperar datos.
-###HEAD
-El HEADmétodo solicita una respuesta idéntica a la de una GETsolicitud, pero sin el cuerpo de respuesta.
+El GET método solicita una representación del recurso especificado. Las solicitudes de uso solo deberían recuperar datos.
+### HEAD
+El método solicita una respuesta idéntica a la de una solicitud, pero sin el cuerpo de respuesta.
 ---
 ### POST
-El POSTmétodo se usa para enviar una entidad al recurso especificado, lo que a menudo causa un cambio en el estado o los efectos secundarios en el servidor.
+El método se usa para enviar una entidad al recurso especificado, lo que a menudo causa un cambio en el estado o los efectos secundarios en el servidor.
 ### PUT
-El PUTmétodo reemplaza todas las representaciones actuales del recurso objetivo con la carga útil de la solicitud.
+El método reemplaza todas las representaciones actuales del recurso objetivo con la carga útil de la solicitud.
 ---
 ### DELETE
-El DELETEmétodo elimina el recurso especificado.
+El método elimina el recurso especificado.
 ### CONNECT
-El CONNECTmétodo establece un túnel para el servidor identificado por el recurso de destino.
+El método establece un túnel para el servidor identificado por el recurso de destino.
 ---
 ### OPTIONS
-El OPTIONSmétodo se usa para describir las opciones de comunicación para el recurso objetivo.
+El método se usa para describir las opciones de comunicación para el recurso objetivo.
 ### TRACE
-El TRACEmétodo realiza una prueba de bucle de mensaje a lo largo de la ruta al recurso de destino.
+El Emétodo realiza una prueba de bucle de mensaje a lo largo de la ruta al recurso de destino.
 
 ### PATCH
-El PATCHmétodo se usa para aplicar modificaciones parciales a un recurso.
+El método se usa para aplicar modificaciones parciales a un recurso.
 ---
 ### Peticiones HTTP
 ### Un ejemplo sería
@@ -72,7 +72,9 @@ El PATCHmétodo se usa para aplicar modificaciones parciales a un recurso.
 
 ---
 ### Respuestas HTTP
+
 Cuando el servidor procesa la petición enviada por el usuario responde de una forma muy parecida a la petición del servidor, la respuesta del servidor está formada por directivas de texto separadas por el carácter CRLF y se divide en
+
 ---
 - La primera parte, es la línea de estado, es una confirmación de la versión de HTTP usado y seguido por el estado de la petición
 - La segunda parte representa las cabeceras HTTP concretas, dando al cliente la información sobre los datos enviados
@@ -89,6 +91,7 @@ Tipos
 - De 500 a 599 son respuestas de error del servidor
 ---
 ### Cookies
+
 Cuando se recibe una solicitud HTTP un servidor puede enviar un Set-Cookie con las respuestas. Las cookies normalmente son almacenadas por el navegador y luego se envía con las solicitudes hechas al mismo servidor dentro de una cookie HTTP
 Los distintos tipos de cookies que hay son
 ---
@@ -99,6 +102,7 @@ Los distintos tipos de cookies que hay son
 ---
 ### Cookies
 ### Gestión de sesiones
+
 Inicios de sesión, carritos de compras, puntajes de juegos o cualquier otra cosa que el servidor deba recordar
 ---
 ### Personalización
@@ -114,6 +118,7 @@ La versión 0.9 fue la primera y fue extremadamente simple. Las solicitudes cons
 
 ---
 ### Evolución de HTTP
+
 Mejoras v 1.0
 - La información del control de versiones se envía ahora dentro da solicitud
 - También se envía una línea de código de estado al comienzo de respuesta.
