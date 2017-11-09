@@ -45,11 +45,13 @@ Los encabezados patentados personalizados se pueden agregar usando el prefijo 'X
 El GET método solicita una representación del recurso especificado. Las solicitudes de uso solo deberían recuperar datos.
 ### HEAD
 El método solicita una respuesta idéntica a la de una solicitud, pero sin el cuerpo de respuesta.
+
 ---
 ### POST
 El método se usa para enviar una entidad al recurso especificado, lo que a menudo causa un cambio en el estado o los efectos secundarios en el servidor.
 ### PUT
 El método reemplaza todas las representaciones actuales del recurso objetivo con la carga útil de la solicitud.
+
 ---
 ### DELETE
 El método elimina el recurso especificado.
@@ -63,6 +65,7 @@ El Emétodo realiza una prueba de bucle de mensaje a lo largo de la ruta al recu
 
 ### PATCH
 El método se usa para aplicar modificaciones parciales a un recurso.
+
 ---
 ### Peticiones HTTP
 ### Un ejemplo sería
@@ -94,6 +97,7 @@ Tipos
 
 Cuando se recibe una solicitud HTTP un servidor puede enviar un Set-Cookie con las respuestas. Las cookies normalmente son almacenadas por el navegador y luego se envía con las solicitudes hechas al mismo servidor dentro de una cookie HTTP
 Los distintos tipos de cookies que hay son
+
 ---
 - Cookies de sesión
 - Cookies permanentes
@@ -104,9 +108,11 @@ Los distintos tipos de cookies que hay son
 ### Gestión de sesiones
 
 Inicios de sesión, carritos de compras, puntajes de juegos o cualquier otra cosa que el servidor deba recordar
+
 ---
 ### Personalización
 Preferencias de usuario, temas y otras configuraciones
+
 ---
 ### Rastreo
 Grabar y analizar el comportamiento del usuario
@@ -123,6 +129,7 @@ Mejoras v 1.0
 - La información del control de versiones se envía ahora dentro da solicitud
 - También se envía una línea de código de estado al comienzo de respuesta.
 - Se ha introducido la noción de encabezados HTTP
+
 ---
 - Con la ayuda de los nuevos encabezados HTTP se ha agregado la capacidad de transmitir otros documentos aparte de los archivos HTML simples
 
@@ -131,6 +138,7 @@ Mejoras v 1.0
 Nuevas mejoras v 1.1
 Se puede reutilizar una conexión, ahorrarle tiempo a reabrirla numerosas veces para mostrar los recursos incrustados en el único documento original
 Se ha agregado la canalización
+
 ---
 Las respuestas fragmentadas ahora son compatibles
 Se han introducido mecanismos adicionales de control de cache
